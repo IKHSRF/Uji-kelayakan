@@ -133,7 +133,7 @@
                                 <h2 class="text-white">- & -</h2>
                                 <h3 class="text-black text-uppercase">We love to serve the perfect</h3>
                                 @if(Auth::user()->id_level == 5)
-                                <a href="ordersu" class="btn btn-primary m-top-100">Main Menu</a>
+                                <a href="orders" class="btn btn-primary m-top-100">Main Menu</a>
                                 @else
                                 <a href="details" class="btn btn-primary m-top-100">Main Menu</a>
                                 @endif
