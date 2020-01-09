@@ -27,7 +27,7 @@
 		<!-- NAVBAR -->
 		<nav class="navbar navbar-default navbar-fixed-top">
 			<div class="brand">
-				<img src="{{asset('admin/assets/img/barber.png')}}" width="100">
+			<img src="{{asset('admin/assets/img/resto.jpg')}}" width="70%" alt="Klorofil Logo" />
 			</div>
 			<div class="container-fluid">
 				<div id="navbar-menu">

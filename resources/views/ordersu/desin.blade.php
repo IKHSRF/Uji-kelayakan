@@ -47,7 +47,7 @@
               <div class="content">
                 <div class="header">
                   <div class="logo text-center">
-                    <img src="{{asset('admin/assets/img/barber.png')}}" alt="Klorofil Logo" />
+                  <img src="{{asset('admin/assets/img/resto.jpg')}}" width="70%" alt="Klorofil Logo" />
                   </div>
                   <p class="lead">Data Tambahan</p>
                 </div>

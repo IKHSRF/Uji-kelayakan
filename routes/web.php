@@ -12,9 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('splash');
-});
-Route::get('/welcome', function () {
     return view('welcome');
 });
 

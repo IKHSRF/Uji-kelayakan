@@ -1,99 +1,87 @@
 <!doctype html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="{{ str_replace('_', '-', app()->getLocale()) }}"> <!--<![endif]-->
+    <head>
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+        <meta charset="utf-8">
+        <title>Dashboard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/png" href="favicon.ico">
 
-    <!-- CSRF Token -->
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <!--Google Font link-->
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Kaushan+Script" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-<!-- Styles -->
-<style>
-    html, body {
-        background-color: #fff;
-        color: #636b6f;
-        font-family: 'Nunito', sans-serif;
-        font-weight: 200;
-        height: 100vh;
-        margin: 0;
-    }
 
-    .full-height {
-        height: 100vh;
-    }
+        <link rel="stylesheet" href="{{asset('screen/assets/css/slick.css')}}"> 
+        <link rel="stylesheet" href="{{asset('screen/assets/css/slick-theme.css')}}">
+        <link rel="stylesheet" href="{{asset('screen/assets/css/animate.css')}}">
+        <link rel="stylesheet" href="{{asset('screen/assets/css/iconfont.css')}}">
+        <link rel="stylesheet" href="{{asset('screen/assets/css/font-awesome.min.css')}}">
+        <link rel="stylesheet" href="{{asset('screen/assets/css/bootstrap.css')}}">
+        <link rel="stylesheet" href="{{asset('screen/assets/css/magnific-popup.css')}}">
+        <link rel="stylesheet" href="{{asset('screen/assets/css/bootsnav.css')}}">
 
-    .flex-center {
-        align-items: center;
-        display: flex;
-        justify-content: center;
-    }
 
-    .position-ref {
-        position: relative;
-    }
 
-    .top-right {
-        position: absolute;
-        right: 10px;
-        top: 18px;
-    }
+        <!--For Plugins external css-->
+        <link rel="stylesheet" href="{{asset('screen/assets/css/plugins.css')}}" />
 
-    .content {
-        text-align: center;
-    }
+        <!--Theme custom css -->
+        <link rel="stylesheet" href="{{asset('screen/assets/css/style.css')}}">
 
-    .title {
-        font-size: 84px;
-    }
+        <!--Theme Responsive css-->
+        <link rel="stylesheet" href="{{asset('screen/assets/css/responsive.css')}}" />
 
-    .links > a {
-        color: #636b6f;
-        padding: 0 25px;
-        font-size: 18px;
-        font-weight: 600;
-        letter-spacing: .1rem;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
+        <script src="{{asset('screen/assets/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js')}}"></script>
+    </head>
 
-    .m-b-md {
-        margin-bottom: 30px;
-    }
-</style>
+    <body data-spy="scroll" data-target=".navbar-collapse" data-offset="100">
 
-    <title>{{ config('Wikrama', 'Wikrama') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}" defer></script>
+        <!-- Preloader -->
+        <div id="loading">
+            <div id="loading-center">
+                <div id="loading-center-absolute">
+                    <div class="object" id="object_one"></div>
+                    <div class="object" id="object_two"></div>
+                    <div class="object" id="object_three"></div>
+                    <div class="object" id="object_four"></div>
+                </div>
+            </div>
+        </div><!--End off Preloader -->
 
-    <!-- Fonts -->
-    <link rel="dns-prefetch" href="//fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-</head>
-<body>
-    <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/masakans') }}">
-                    {{ config('Main Menu', 'Main Menu') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <div class="culmn">
+            <!--Home page style-->
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-                    </ul>
 
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                        <!-- Authentication Links -->
-                        @guest
+            <nav class="navbar navbar-default bootsnav navbar-fixed no-background white">
+                <div class="container"> 
+                    <div class="attr-nav">
+                    </div> 
+                    <!-- Start Header Navigation -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="#brand">
+                            <img src="{{asset('screen/assets/images/logo.png')}}" class="logo" alt="">
+                            <!--<img src="assets/images/footer-logo.png" class="logo logo-scrolled" alt="">-->
+                        </a>
+
+                    </div>
+                    <!-- End Header Navigation -->
+
+                    <!-- navbar menu -->
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
@@ -119,24 +107,67 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li>   
+                            </li>
                         @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav>
-        <div class="flex-center position-ref full-height">
-            <main class="py-4">
-                <div class="content">
-                    <div class="title m-b-md">
-                        Selamat Datang
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div> 
+
+            </nav>
+
+            <!--Home Sections-->
+
+            <section id="home" class="home bg-black fix">
+                <div class="overlay"></div>
+                <div class="container">
+                    <div class="row">
+                        <div class="main_home text-center">
+                            <div class="col-md-12">
+                                <div class="hello">
+                                <section id="about" class="about bg-yellow roomy-80">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="main_about text-center">
+                                <h1 class="text-black">Wikrama Restaurant</h1>
+                                <h2 class="text-white">- & -</h2>
+                                <h3 class="text-black text-uppercase">We love to serve the perfect</h3>
+
+                                <a href="../masakans" class="btn btn-primary m-top-100">Main Menu</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="links">
-                    <a href="/masakans">Main Menu</a>
-                    </div>
                 </div>
-            </main>
+            </section>
+                            
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--End off row-->
+                </div><!--End off container -->
+            </section> <!--End off Home Sections-->
         </div>
-    </div>
-</body>
+
+        <!-- JS includes -->
+
+        <script src="{{asset('screen/assets/js/vendor/jquery-1.11.2.min.js')}}"></script>
+        <script src="{{asset('screen/assets/js/vendor/bootstrap.min.js')}}"></script>
+
+        <script src="{{asset('screen/assets/js/jquery.magnific-popup.js')}}"></script>
+        <!--<script src="assets/js/jquery.easypiechart.min.js"></script>-->
+        <script src="{{asset('screen/assets/js/jquery.easing.1.3.js')}}"></script>
+        <!--<script src="assets/js/slick.js"></script>-->
+        <script src="{{asset('screen/assets/js/slick.min.js')}}"></script>
+        <script src="{{asset('screen/assets/js/js.isotope.js')}}"></script>
+        <script src="{{asset('screen/assets/js/jquery.collapse.js')}}"></script>
+        <script src="{{asset('screen/assets/js/bootsnav.js')}}"></script>
+
+        <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+        <script src="{{asset('screen/assets/js/plugins.js')}}"></script>
+        <script src="{{asset('screen/assets/js/main.js')}}"></script>
+
+
+
+    </body>
 </html>
