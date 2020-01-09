@@ -20,6 +20,7 @@ class CreateOrdersTable extends Migration
             $table->string('id_user');
             $table->string('keterangan');
             $table->string('status_order');
+            $table->string('id_masakan');
             $table->timestamps();
         });
     }

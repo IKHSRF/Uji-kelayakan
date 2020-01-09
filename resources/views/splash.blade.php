@@ -179,9 +179,9 @@ body.welcome {
   <main class="valign-wrapper">
     <span class="container grey-text text-lighten-1 ">
 
-      <h1 class="title grey-text text-lighten-3">Barber Folks</h1>
+      <h1 class="title grey-text text-lighten-3">Wikrama</h1>
 
-      <blockquote class="flow-text">Selamat Datang</blockquote>
+      <blockquote class="flow-text">Restoran Khas</blockquote>
 
       <div class="center-align">
         <!-- Dropdown Trigger -->

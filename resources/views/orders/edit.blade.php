@@ -3,9 +3,6 @@
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
-            <div class="pull-left">
-                <h2>Edit Data Order Masakan</h2>
-            </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('orders.index') }}"> Back</a>
             </div>
@@ -63,6 +60,17 @@
                 <option value="Ready">Ready</option>
                 <option value="Not Ready">Not Ready</option>
                 </select>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="form-group">
+                <strong>ID Masakan :</strong>
+                <select name="id_masakan" class="form-control">
+                    <option value="{{ $order->id_masakan }}" selected="selected">{{ $order->id_masakan }}</option>
+                    @foreach ($masakan_array as $detail)
+                    <option value="{{ $detail->id_masakan }}">{{ $detail->id_masakan}}</option>
+                    @endforeach
+                 </select>
             </div>
         </div>
         <div class="col-xs-12 col-sm-12 col-md-12 text-center">

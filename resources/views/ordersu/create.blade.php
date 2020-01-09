@@ -22,7 +22,7 @@
    
 <form action="{{ route('orders.store') }}" method="POST">
     @csrf
-        <input type="hidden" name="id_order" class="form-control"  placeholder="ID Order" readonly value="{{rand(1, 10000)}}">
+    <input type="hidden" name="id_order" class="form-control"  placeholder="ID Order" readonly value="{{rand(1, 10000)}}">
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>No Meja :</strong>
@@ -65,8 +65,8 @@
         <div class="col-xs-12 col-sm-12 col-md-12">
             <div class="form-group">
                 <strong>ID Masakan :</strong>
-                <select name="id_masakan" class="form-control">
-                    <option disabled="disabled" selected="selected">ID Masakan</option>
+                <select name="id_order" class="form-control">
+                    <option disabled="disabled" selected="selected">ID Order</option>
                     @foreach ($masakan_array as $detail)
                     <option value="{{ $detail->id_masakan }}">{{ $detail->id_masakan}}</option>
                     @endforeach

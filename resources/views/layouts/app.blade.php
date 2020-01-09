@@ -45,9 +45,6 @@
                         <li class="nav-item">
                                 <a class="nav-link" href="../transaksis">Transaksi</a>
                         </li>
-                        <li class="nav-item">
-                                <a class="nav-link" href="../laporans">Laporan</a>
-                        </li>
                     </ul>
 
                     <!-- Right Side Of Navbar -->

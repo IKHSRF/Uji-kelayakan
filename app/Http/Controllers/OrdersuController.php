@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Order;
+use App\Detail;
 use Illuminate\Http\Request;
 
 class OrdersuController extends Controller
@@ -47,6 +48,13 @@ class OrdersuController extends Controller
         ]);
   
         Order::create($request->all());
+
+        Detail::create([
+            'id_order' => $request->id_order,
+            'id_masakan' => $request->id_masakan,
+            'keterangan' => $request->keterangan,
+            'status_detail_order' => $request->status_order,
+        ]);
    
         return redirect()->route('ordersu.index')
                         ->with('success','Data Order Masakan Berhasil Di Simpan');
@@ -91,6 +99,12 @@ class OrdersuController extends Controller
             'status_order' => 'required',
         ]);
         $order->update($request->all());
+
+        Detail::update([
+            'id_masakan' => $request->id_masakan,
+            'keterangan' => $request->keterangan,
+            'status_detail_order' => $request->status_order,
+        ]);
 
         return redirect()->route('ordersu.index')
                         ->with('success','Data Order Masakan Berhasil Di ubah');

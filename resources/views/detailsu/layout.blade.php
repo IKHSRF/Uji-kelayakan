@@ -47,11 +47,9 @@
 					<ul class="nav">
 						<li><span>1</span></li>
 						<li><span>2</span></li>
-						<li><a href="../adminHome" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="../masakans"class="active"><i class="lnr lnr-smile"></i> <span>Masakan</span></a></li>
-						<li><a href="../orders" class=""><i class="lnr lnr-file-add"></i> <span>Order</span></a></li>
-						<li><a href="../details" class=""><i class="lnr lnr-user"></i> <span>Detail</span></a></li>
-						<li><a href="../transaksis" class=""><i class="lnr lnr-laptop-phone"></i> <span>Transaksi</span></a></li>
+						<li><a href="../home" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
+						<li><a href="../ordersu" class=""><i class="lnr lnr-file-add"></i> <span>Order</span></a></li>
+						<li><a href="../detailsu" class="active"><i class="lnr lnr-user"></i> <span>Detail</span></a></li>
 					</ul>
 				</nav>
 			</div>

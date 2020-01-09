@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Detail;
+use PDF;
 use Illuminate\Http\Request;
 
 class DetailsuController extends Controller
@@ -20,6 +21,13 @@ class DetailsuController extends Controller
             ->with('i',(request()->input('page', 1) - 1) * 5);
     }
 
+    public function cetak_pdf()
+    {
+    	$details = Detail::all();
+ 
+    	$pdf = PDF::loadview('details.laporanpdf',['details'=>$details]);
+    	return $pdf->download('laporan-transaksi-pdf');
+    }
     /**
      * Show the form for creating a new resource.
      *

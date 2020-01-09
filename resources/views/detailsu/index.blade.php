@@ -1,4 +1,4 @@
-@extends('details.layout')
+@extends('detailsu.layout')
 @section('content')
 <div class="main">
     <div class="main-content">
@@ -19,8 +19,8 @@
                                         <label>PILIH TANGGAL</label>
                                         <input type="date" name="tanggal">
                                         <input type="submit" value="FILTER">
-                                </form>
-                                <a href="/laporans/cetak_pdf" class="btn btn-primary">CETAK PDF</a>
+                                    </form>
+                                    <a href="/laporans/cetak_pdf" class="btn btn-primary">CETAK PDF</a>
 								<div class="panel-body">
 									<table class="table table-hover">
 										<thead>
@@ -57,7 +57,6 @@
                                 
                                                     <a class="btn btn-info" href="{{ route('details.show',$order->id_detail_order) }}">Show</a>
                                     
-                                
                                                     @csrf
                                                     @method('DELETE')
                                     

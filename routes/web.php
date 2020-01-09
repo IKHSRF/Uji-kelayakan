@@ -19,11 +19,13 @@ Route::get('/welcome', function () {
 });
 
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('is_admin');
+Route::get('/adminHome', 'HomeController@index')->name('adminhome');
 Route::resource('masakans', 'MasakanController');
 Route::resource('orders', 'OrderController');
+Route::resource('ordersu', 'OrdersuController');
 Route::resource('details', 'DetailController');
+Route::resource('detailsu', 'DetailsuController');
 Route::resource('transaksis', 'TransaksiController');
-Route::get('/laporans', 'LaporanController@index');
-Route::get('/laporans/cetak_pdf', 'LaporanController@cetak_pdf');
+Route::get('/laporans/cetak_pdf', 'DetailController@cetak_pdf');

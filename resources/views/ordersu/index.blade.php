@@ -1,4 +1,4 @@
-@extends('orders.layout')
+@extends('ordersu.layout')
 @section('content')
 <div class="main">
     <div class="main-content">
@@ -23,13 +23,11 @@
 										<thead>
                                         <tr>
                                             <th>No</th>
-                                            <th>ID Order</th>
                                             <th>No Meja</th>
                                             <th>Tanggal</th>
                                             <th>ID user</th>
                                             <th>keterangan</th>
                                             <th>Status Order</th>
-                                            <th>ID Masakan</th>
                                             <th width="280px">Action</th>
                                         </tr>
 										</thead>
@@ -37,13 +35,11 @@
                                         @foreach ($orders as $order)
                                         <tr>
                                             <td>{{ ++$i }}</td>
-                                            <td>{{ $order->id_order }}</td>
                                             <td>{{ $order->no_meja }}</td>
                                             <td>{{ $order->tanggal }}</td>
                                             <td>{{ $order->id_user }}</td>
                                             <td>{{ $order->keterangan }}</td>
                                             <td>{{ $order->status_order }}</td>
-                                            <td>{{ $order->id_masakan }}</td>
                                             <td>
                                                 <form action="{{ route('orders.destroy',$order->id_order) }}" method="POST">
                                 
