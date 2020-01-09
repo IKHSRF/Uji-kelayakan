@@ -16,9 +16,7 @@ Route::get('/', function () {
 });
 
 Auth::routes();
-Route::get('admin/home', 'HomeController@adminHome')->name('admin.home')->middleware('is_admin');
-Route::get('/home', 'HomeController@index')->name('home')->middleware('is_admin');
-Route::get('/adminHome', 'HomeController@index')->name('adminhome');
+Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('masakans', 'MasakanController');
 Route::resource('orders', 'OrderController');
 Route::resource('ordersu', 'OrdersuController');

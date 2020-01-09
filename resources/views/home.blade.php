@@ -132,8 +132,11 @@
                                 <h1 class="text-black">Wikrama Restaurant</h1>
                                 <h2 class="text-white">- & -</h2>
                                 <h3 class="text-black text-uppercase">We love to serve the perfect</h3>
-
-                                <a href="masakans" class="btn btn-primary m-top-100">Main Menu</a>
+                                @if(Auth::user()->id_level == 5)
+                                <a href="ordersu" class="btn btn-primary m-top-100">Main Menu</a>
+                                @else
+                                <a href="details" class="btn btn-primary m-top-100">Main Menu</a>
+                                @endif
                             </div>
                         </div>
                     </div>

@@ -49,7 +49,6 @@
 						<li><span>2</span></li>
 						<li><a href="../home" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
 						<li><a href="../ordersu" class="active"><i class="lnr lnr-file-add"></i> <span>Order</span></a></li>
-						<li><a href="../detailsu" class=""><i class="lnr lnr-user"></i> <span>Detail</span></a></li>
 					</ul>
 				</nav>
 			</div>
