@@ -28,7 +28,7 @@
                     <select name="id_user" class="form-control">
                         <option disabled="disabled" selected="selected">ID User</option>
                         @foreach ($user_array as $user)
-                        <option value="{{ $user->id_user }}">{{ $user->nama_user}}</option>
+                        <option value="{{ $user->nama_user }}">{{ $user->nama_user}}</option>
                         @endforeach
                     </select>
             </div>
@@ -65,11 +65,11 @@
                 <input type="text" name="id_masakan" id="id_masakan" class="form-control" placeholder="ID Masakan" onchange='changeValueN(this.value)' readonly>
                 <?php
                 $con = mysqli_connect("127.0.0.1", "root","", "kelayakan");
-                $query=mysqli_query($con, "select * from masakans order by id_masakan asc");
+                $query=mysqli_query($con, "select * from masakans order by nama_masakan asc");
                 $result = mysqli_query($con, "select * from masakans");
                 $jsArrayN = "var nisNama = new Array();\n";
                 while ($rowa = mysqli_fetch_array($result)) {
-                $jsArrayN .= "nisNama['" . $rowa['id_masakan'] . "'] = {harga:'" . addslashes($rowa['harga']) . "' };\n";
+                $jsArrayN .= "nisNama['" . $rowa['nama_masakan'] . "'] = {harga:'" . addslashes($rowa['harga']) . "' };\n";
                 }
                 ?>
             </div>

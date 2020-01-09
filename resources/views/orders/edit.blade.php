@@ -41,7 +41,7 @@
                     <select name="id_user" class="form-control">
                         <option selected="selected">{{ $order->id_user}}</option>
                         @foreach ($user_array as $user)
-                        <option value="{{ $user->id_user }}">{{ $user->nama_user}}</option>
+                        <option value="{{ $user->nama_user }}">{{ $user->nama_user}}</option>
                         @endforeach
                     </select>
             </div>
@@ -68,7 +68,7 @@
                 <select name="id_masakan" class="form-control">
                     <option value="{{ $order->id_masakan }}" selected="selected">{{ $order->id_masakan }}</option>
                     @foreach ($masakan_array as $detail)
-                    <option value="{{ $detail->id_masakan }}">{{ $detail->id_masakan}}</option>
+                    <option value="{{ $detail->nama_masakan }}">{{ $detail->nama_masakan}}</option>
                     @endforeach
                  </select>
             </div>

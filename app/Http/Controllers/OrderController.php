@@ -51,6 +51,7 @@ class OrderController extends Controller
         Order::create($request->all());
 
         Detail::create([
+            'id_user' => $request->id_user,
             'id_order' => $request->id_order,
             'id_masakan' => $request->id_masakan,
             'keterangan' => $request->keterangan,
@@ -104,6 +105,7 @@ class OrderController extends Controller
         $order->update($request->all());
 
         Detail::update([
+            'id_user' => $request->id_user,
             'id_masakan' => $request->id_masakan,
             'keterangan' => $request->keterangan,
             'status_detail_order' => $request->status_order,

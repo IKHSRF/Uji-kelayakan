@@ -29,6 +29,7 @@
                                             <th>ID Order</th>
                                             <th>ID Masakan</th>
                                             <th>keterangan</th>
+                                            <th>ID User</th>
                                             <th>Status Detail Order</th>
                                             <th width="280px">Action</th>
                                         </tr>
@@ -51,6 +52,7 @@
                                             <td>{{ $order->id_order }}</td>
                                             <td>{{ $order->id_masakan }}</td>
                                             <td>{{ $order->keterangan }}</td>
+                                            <td>{{ $order->id_user }}</td>
                                             <td>{{ $order->status_detail_order }}</td>
                                             <td>
                                                 <form action="{{ route('details.destroy',$order->id_detail_order) }}" method="POST">

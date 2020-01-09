@@ -51,19 +51,19 @@
 						<li><a href="../home" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
 						<li><a href="../masakans"class=""><i class="lnr lnr-smile"></i> <span>Masakan</span></a></li>
 						<li><a href="../orders" class=""><i class="lnr lnr-file-add"></i> <span>Order</span></a></li>
-						<li><a href="../details" class=""><i class="lnr lnr-user"></i> <span>Detail</span></a></li>
-						<li><a href="../transaksis" class="active"><i class="lnr lnr-laptop-phone"></i> <span>Transaksi</span></a></li>
+						<li><a href="../details" class="active"><i class="lnr lnr-user"></i> <span>Detail</span></a></li>
+						<li><a href="../transaksis" class=""><i class="lnr lnr-laptop-phone"></i> <span>Transaksi</span></a></li>
 						@elseif(Auth::user()->id_level == 2)
 						<li><a href="../home" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
 						<li><a href="../orders" class=""><i class="lnr lnr-file-add"></i> <span>Order</span></a></li>
-						<li><a href="../details" class=""><i class="lnr lnr-user"></i> <span>Detail</span></a></li>
+						<li><a href="../details" class="active"><i class="lnr lnr-user"></i> <span>Detail</span></a></li>
 						@elseif(Auth::user()->id_level == 3)
 						<li><a href="../home" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="../details" class=""><i class="lnr lnr-user"></i> <span>Detail</span></a></li>
-						<li><a href="../transaksis" class="active"><i class="lnr lnr-laptop-phone"></i> <span>Transaksi</span></a></li>
+						<li><a href="../details" class="active"><i class="lnr lnr-user"></i> <span>Detail</span></a></li>
+						<li><a href="../transaksis" class=""><i class="lnr lnr-laptop-phone"></i> <span>Transaksi</span></a></li>
 						@else
 						<li><a href="../home" class=""><i class="lnr lnr-home"></i> <span>Dashboard</span></a></li>
-						<li><a href="../details" class=""><i class="lnr lnr-user"></i> <span>Detail</span></a></li>
+						<li><a href="../details" class="active"><i class="lnr lnr-user"></i> <span>Detail</span></a></li>
 						@endif
 					</ul>
 				</nav>
